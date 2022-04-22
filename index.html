@@ -28,6 +28,13 @@
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	
+	
+	
+<!-- In <head> add scripts and styles to your html page -->
+<script src="https://chat.valentabpo.onereach.ai/lib/richWebChat.umd.min.js"></script>
+<link rel="stylesheet" href="https://chat.valentabpo.onereach.ai/lib/richWebChat.css"/>
+	
+	
 	<!-- Favicon  -->
     <link rel="icon" href="">
 </head>
@@ -122,7 +129,7 @@
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
                         <div class="image-container">
-                            <img class="img-fluid" src="img/hr1.jfif" alt="alternative">
+                            <img class="img-fluid" src="img/hr1.jfif" alt="">
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -141,5 +148,36 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+	
+<!-- insert code below into <body> -->
+<div id="rwc"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var RWC = richWebChat.default
+    var app = new RWC({
+      container: '#rwc', // DOM element selector where chat will be inserted
+      chatUrl: 'https://chat.valentabpo.onereach.ai/y2L3j9GsTDK1yvKBgWbpFw/0bnz4oe', // url of your chat. required
+      autoExpandDelay: 15000,
+      position: 'bottom-right',
+      inviteMessage: "",
+      inviteButton: "",
+      inviteImage: undefined,
+      showCloseIcon: false,
+      inviteTimeout: 5000,
+      allowChangeChatWindowSize: true,
+      allowDrag: false,
+      widgetColor: '#FFFFFF',
+      allowStartNewConversation: false,
+      thumbLogo: 'https://i.giphy.com/media/9KNNKJ3u8QjCOatFWe/giphy.webp',
+      animation: 'pulse', // 'pulse', 'ring', 'zoom',
+      appearance: {
+        blurredBackground: false
+      },
+      pageData: {
+        fname: 'foo'
+      }
+    })
+  });
+</script>
 </body>
 </html>
